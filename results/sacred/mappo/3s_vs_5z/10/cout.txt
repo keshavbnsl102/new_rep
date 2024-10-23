@@ -1,0 +1,530 @@
+[INFO 19:29:21] spectral_epymarl Running command 'my_main'
+[INFO 19:29:21] spectral_epymarl Started run with ID "10"
+[DEBUG 19:29:21] spectral_epymarl Starting Heartbeat
+[DEBUG 19:29:21] my_main Started
+[INFO 19:29:21] my_main Experiment Parameters:
+[INFO 19:29:21] my_main 
+
+{   'action_selector': 'soft_policies',
+    'add_value_last_step': True,
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 10,
+    'batch_size_run': 10,
+    'buffer_cpu_only': True,
+    'buffer_size': 10,
+    'checkpoint_path': '',
+    'critic_spectral': True,
+    'critic_type': 'cv_critic',
+    'entropy_coef': 0.001,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': '3s_vs_5z',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 3,
+                    'state_last_action': False,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epochs': 4,
+    'eps_clip': 0.2,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hidden_dim': 128,
+    'hypergroup': None,
+    'label': 'default_label',
+    'learner': 'ppo_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'name': 'spectralNorm_cs_mappo',
+    'obs_agent_id': True,
+    'obs_individual_obs': False,
+    'obs_last_action': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'policy_spectral': False,
+    'q_nstep': 10,
+    'repeat_id': 1,
+    'rnn_spectral': False,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': True,
+    'save_model_interval': 1000000,
+    'save_replay': False,
+    'seed': 3,
+    'spectral_regularization': False,
+    'standardise_returns': False,
+    'standardise_rewards': False,
+    't_max': 40050000,
+    'target_update_interval_or_tau': 0.01,
+    'test_greedy': True,
+    'test_interval': 1000000,
+    'test_nepisode': 100,
+    'use_cuda': True,
+    'use_rnn': True,
+    'use_tensorboard': True,
+    'use_wandb': False,
+    'wandb_entity': 'kinalmehta',
+    'wandb_project': 'marl-spectral'}
+
+[INFO 19:29:29] my_main Beginning training for 40050000 timesteps
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15789 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-xsanavr5/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 16728 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-0buuaifu/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 21028 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-gqb7j6y5/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15329 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-gjpd51md/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 17590 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-zf48y9av/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15837 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-7hk66b2h/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 18252 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-aul_h47j/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 17596 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-sg0wzukk/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 21473 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-4d6b2ba_/
+[INFO 19:29:29] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 16501 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-zryasxrk/
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:21473/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:17596/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:21028/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:15837/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:17590/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:18252/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:15789/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:15329/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:16501/sc2api, attempt: 0, running: True
+[INFO 19:29:29] absl Connecting to: ws://127.0.0.1:16728/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 21028 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-gqb7j6y5/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 17596 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-sg0wzukk/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 16728 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-0buuaifu/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15789 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-xsanavr5/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 16501 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-zryasxrk/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 18252 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-aul_h47j/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15837 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-7hk66b2h/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 21473 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-4d6b2ba_/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15329 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-gjpd51md/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 17590 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-zf48y9av/'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:21473/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:16728/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:17590/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:15329/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:15789/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:21028/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:17596/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:18252/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:16501/sc2api, attempt: 1, running: True
+[INFO 19:29:30] absl Connecting to: ws://127.0.0.1:15837/sc2api, attempt: 1, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:21473/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:16728/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:17590/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:15789/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:15329/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:17596/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:21028/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:16501/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:18252/sc2api, attempt: 2, running: True
+[INFO 19:29:31] absl Connecting to: ws://127.0.0.1:15837/sc2api, attempt: 2, running: True
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+Startup Phase 2 complete
+Creating stub renderer...
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:21473/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:16728/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:17590/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:15789/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:15329/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:17596/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:21028/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:16501/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:18252/sc2api, attempt: 3, running: True
+[INFO 19:29:32] absl Connecting to: ws://127.0.0.1:15837/sc2api, attempt: 3, running: True
+Listening on: 127.0.0.1:16728
+Listening on: 127.0.0.1:15329
+Listening on: 127.0.0.1:17596
+Listening on: 127.0.0.1:16501
+Listening on: 127.0.0.1:17590
+Listening on: 127.0.0.1:15789
+Listening on: 127.0.0.1:21473
+Listening on: 127.0.0.1:15837
+Listening on: 127.0.0.1:18252
+Listening on: 127.0.0.1:21028
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:21473/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:16728/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:17590/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:15329/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:15789/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:18252/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:17596/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:21028/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:16501/sc2api, attempt: 4, running: True
+[INFO 19:29:33] absl Connecting to: ws://127.0.0.1:15837/sc2api, attempt: 4, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Configuring interface options
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Entering load game phase.
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Requesting to join a single player game
+Configuring interface options
+Configuring interface options
+Configure: raw interface enabled
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Configure: render interface disabled
+Next launch phase started: 2
+Entering load game phase.
+Entering load game phase.
+Next launch phase started: 3
+Launching next game.
+Launching next game.
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Next launch phase started: 2
+Next launch phase started: 3
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Next launch phase started: 4
+Entering load game phase.
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 3
+Requesting to join a single player game
+Configuring interface options
+Next launch phase started: 2
+Next launch phase started: 3
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Entering load game phase.
+Next launch phase started: 7
+Next launch phase started: 8
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Game has started.
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+[INFO 19:29:49] my_main t_env: 415 / 40050000
+[INFO 19:29:49] my_main Estimated time left: 13 minutes, 25 seconds. Time passed: 20 seconds
+[INFO 19:30:00] my_main Saving models to results/models/spectralNorm_cs_mappo_seed3_3s_vs_5z_2022-08-14 19:29:21.353817/415
+[INFO 19:32:42] my_main Recent Stats | t_env:      50132 | Episode:     1590
+actor_stats/advantage_mean:  0.0904	actor_stats/pg_loss:      -0.0922	actor_stats/pi_max:        0.6362	critic_stats/critic_loss:  0.1607
+critic_stats/q_taken_mean:  1.0804	critic_stats/target_mean:  1.1708	critic_stats/td_error_abs:  0.2818	max_singular_values/actor_layer_0:  1.6769
+max_singular_values/actor_layer_2:  2.8948	max_singular_values/actor_layer_3:  2.3259	max_singular_values/actor_layer_6:  1.7216	max_singular_values/actor_layer_8:  0.8360
+max_singular_values/critic_layer_0:  1.7052	max_singular_values/critic_layer_2:  2.0144	max_singular_values/critic_layer_5:  1.2233	max_singular_values/critic_layer_6:  0.6316
+norm/agent_grad_norm:      0.0813	norm/agent_param_norm:    19.2533	norm/critic_grad_norm:     0.5826	norm/critic_param_norm:   11.6967
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  2.9805
+train_runner_stats/dead_enemies_mean:  0.0189	train_runner_stats/ep_length_mean: 36.9662	train_runner_stats/return_mean:  3.6366	train_runner_stats/return_std:  0.4240
+
+[INFO 19:34:41] my_main Recent Stats | t_env:     100323 | Episode:     3350
+actor_stats/advantage_mean: -0.0104	actor_stats/pg_loss:       0.0089	actor_stats/pi_max:        0.5448	critic_stats/critic_loss:  0.0290
+critic_stats/q_taken_mean:  1.9544	critic_stats/target_mean:  1.9441	critic_stats/td_error_abs:  0.1319	max_singular_values/actor_layer_0:  2.6692
+max_singular_values/actor_layer_2:  5.0448	max_singular_values/actor_layer_3:  3.5627	max_singular_values/actor_layer_6:  2.3188	max_singular_values/actor_layer_8:  1.1214
+max_singular_values/critic_layer_0:  2.3254	max_singular_values/critic_layer_2:  3.4801	max_singular_values/critic_layer_5:  1.3334	max_singular_values/critic_layer_6:  0.7011
+norm/agent_grad_norm:      0.0622	norm/agent_param_norm:    20.6769	norm/critic_grad_norm:     0.4271	norm/critic_param_norm:   12.4104
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  2.9994
+train_runner_stats/dead_enemies_mean:  0.0094	train_runner_stats/ep_length_mean: 28.2976	train_runner_stats/return_mean:  4.0847	train_runner_stats/return_std:  0.3013
+
+[INFO 19:36:37] my_main Recent Stats | t_env:     150494 | Episode:     5140
+actor_stats/advantage_mean: -0.0251	actor_stats/pg_loss:       0.0235	actor_stats/pi_max:        0.5140	critic_stats/critic_loss:  0.0267
+critic_stats/q_taken_mean:  2.1907	critic_stats/target_mean:  2.1656	critic_stats/td_error_abs:  0.1260	max_singular_values/actor_layer_0:  3.2215
+max_singular_values/actor_layer_2:  6.8227	max_singular_values/actor_layer_3:  4.8577	max_singular_values/actor_layer_6:  2.9599	max_singular_values/actor_layer_8:  1.3221
+max_singular_values/critic_layer_0:  2.7271	max_singular_values/critic_layer_2:  3.7918	max_singular_values/critic_layer_5:  1.4482	max_singular_values/critic_layer_6:  0.7025
+norm/agent_grad_norm:      0.0526	norm/agent_param_norm:    22.4935	norm/critic_grad_norm:     0.5287	norm/critic_param_norm:   12.7429
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0017	train_runner_stats/ep_length_mean: 28.2051	train_runner_stats/return_mean:  4.3424	train_runner_stats/return_std:  0.2944
+
+[INFO 19:38:33] my_main Recent Stats | t_env:     200542 | Episode:     6930
+actor_stats/advantage_mean: -0.0049	actor_stats/pg_loss:       0.0035	actor_stats/pi_max:        0.5467	critic_stats/critic_loss:  0.0382
+critic_stats/q_taken_mean:  2.2313	critic_stats/target_mean:  2.2264	critic_stats/td_error_abs:  0.1521	max_singular_values/actor_layer_0:  3.3166
+max_singular_values/actor_layer_2:  7.0882	max_singular_values/actor_layer_3:  5.3167	max_singular_values/actor_layer_6:  3.1222	max_singular_values/actor_layer_8:  1.5422
+max_singular_values/critic_layer_0:  2.9780	max_singular_values/critic_layer_2:  4.0556	max_singular_values/critic_layer_5:  1.6053	max_singular_values/critic_layer_6:  0.6881
+norm/agent_grad_norm:      0.0459	norm/agent_param_norm:    23.1801	norm/critic_grad_norm:     0.4921	norm/critic_param_norm:   13.0258
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0061	train_runner_stats/ep_length_mean: 27.9678	train_runner_stats/return_mean:  4.4022	train_runner_stats/return_std:  0.3130
+
+[INFO 19:40:28] my_main Recent Stats | t_env:     250710 | Episode:     8720
+actor_stats/advantage_mean: -0.0315	actor_stats/pg_loss:       0.0300	actor_stats/pi_max:        0.5083	critic_stats/critic_loss:  0.0411
+critic_stats/q_taken_mean:  2.2650	critic_stats/target_mean:  2.2335	critic_stats/td_error_abs:  0.1552	max_singular_values/actor_layer_0:  3.4906
+max_singular_values/actor_layer_2:  7.3219	max_singular_values/actor_layer_3:  5.6711	max_singular_values/actor_layer_6:  3.1978	max_singular_values/actor_layer_8:  1.6934
+max_singular_values/critic_layer_0:  3.1236	max_singular_values/critic_layer_2:  4.3071	max_singular_values/critic_layer_5:  1.7686	max_singular_values/critic_layer_6:  0.6688
+norm/agent_grad_norm:      0.0315	norm/agent_param_norm:    24.0500	norm/critic_grad_norm:     0.8511	norm/critic_param_norm:   13.3015
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0028	train_runner_stats/ep_length_mean: 28.0278	train_runner_stats/return_mean:  4.4183	train_runner_stats/return_std:  0.2997
+
+[INFO 19:42:24] my_main Recent Stats | t_env:     300762 | Episode:    10510
+actor_stats/advantage_mean:  0.0058	actor_stats/pg_loss:      -0.0073	actor_stats/pi_max:        0.5536	critic_stats/critic_loss:  0.0316
+critic_stats/q_taken_mean:  2.2575	critic_stats/target_mean:  2.2633	critic_stats/td_error_abs:  0.1355	max_singular_values/actor_layer_0:  3.5609
+max_singular_values/actor_layer_2:  7.5160	max_singular_values/actor_layer_3:  6.1394	max_singular_values/actor_layer_6:  3.2089	max_singular_values/actor_layer_8:  1.8590
+max_singular_values/critic_layer_0:  3.2336	max_singular_values/critic_layer_2:  4.5720	max_singular_values/critic_layer_5:  1.8712	max_singular_values/critic_layer_6:  0.6576
+norm/agent_grad_norm:      0.0408	norm/agent_param_norm:    24.8055	norm/critic_grad_norm:     0.4876	norm/critic_param_norm:   13.5601
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0038	train_runner_stats/ep_length_mean: 27.9345	train_runner_stats/return_mean:  4.4195	train_runner_stats/return_std:  0.3033
+
+[INFO 19:44:20] my_main Recent Stats | t_env:     350891 | Episode:    12300
+actor_stats/advantage_mean:  0.0008	actor_stats/pg_loss:      -0.0024	actor_stats/pi_max:        0.5273	critic_stats/critic_loss:  0.0318
+critic_stats/q_taken_mean:  2.2724	critic_stats/target_mean:  2.2731	critic_stats/td_error_abs:  0.1364	max_singular_values/actor_layer_0:  3.7334
+max_singular_values/actor_layer_2:  7.6737	max_singular_values/actor_layer_3:  6.7303	max_singular_values/actor_layer_6:  3.2184	max_singular_values/actor_layer_8:  2.0211
+max_singular_values/critic_layer_0:  3.3853	max_singular_values/critic_layer_2:  4.8059	max_singular_values/critic_layer_5:  2.0342	max_singular_values/critic_layer_6:  0.6505
+norm/agent_grad_norm:      0.0299	norm/agent_param_norm:    25.5186	norm/critic_grad_norm:     0.3943	norm/critic_param_norm:   13.8500
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0011	train_runner_stats/ep_length_mean: 28.0429	train_runner_stats/return_mean:  4.4558	train_runner_stats/return_std:  0.3064
+
+[INFO 19:46:16] my_main Recent Stats | t_env:     401047 | Episode:    14090
+actor_stats/advantage_mean:  0.0136	actor_stats/pg_loss:      -0.0149	actor_stats/pi_max:        0.5302	critic_stats/critic_loss:  0.0361
+critic_stats/q_taken_mean:  2.2889	critic_stats/target_mean:  2.3025	critic_stats/td_error_abs:  0.1486	max_singular_values/actor_layer_0:  3.8146
+max_singular_values/actor_layer_2:  7.8856	max_singular_values/actor_layer_3:  7.2546	max_singular_values/actor_layer_6:  3.3218	max_singular_values/actor_layer_8:  2.0968
+max_singular_values/critic_layer_0:  3.5301	max_singular_values/critic_layer_2:  4.9656	max_singular_values/critic_layer_5:  2.0917	max_singular_values/critic_layer_6:  0.6492
+norm/agent_grad_norm:      0.0323	norm/agent_param_norm:    26.1904	norm/critic_grad_norm:     0.4167	norm/critic_param_norm:   14.1279
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0000	train_runner_stats/ep_length_mean: 27.9760	train_runner_stats/return_mean:  4.4535	train_runner_stats/return_std:  0.3039
+
+[INFO 19:48:13] my_main Recent Stats | t_env:     451061 | Episode:    15860
+actor_stats/advantage_mean:  0.0319	actor_stats/pg_loss:      -0.0335	actor_stats/pi_max:        0.5363	critic_stats/critic_loss:  0.0425
+critic_stats/q_taken_mean:  2.2614	critic_stats/target_mean:  2.2933	critic_stats/td_error_abs:  0.1607	max_singular_values/actor_layer_0:  4.0304
+max_singular_values/actor_layer_2:  8.1105	max_singular_values/actor_layer_3:  7.8077	max_singular_values/actor_layer_6:  3.4346	max_singular_values/actor_layer_8:  2.2215
+max_singular_values/critic_layer_0:  3.6508	max_singular_values/critic_layer_2:  5.1534	max_singular_values/critic_layer_5:  2.1896	max_singular_values/critic_layer_6:  0.6424
+norm/agent_grad_norm:      0.0463	norm/agent_param_norm:    26.8259	norm/critic_grad_norm:     0.7052	norm/critic_param_norm:   14.3942
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0006	train_runner_stats/ep_length_mean: 28.2550	train_runner_stats/return_mean:  4.4913	train_runner_stats/return_std:  0.3092
+
+[INFO 19:50:10] my_main Recent Stats | t_env:     501285 | Episode:    17630
+actor_stats/advantage_mean:  0.0104	actor_stats/pg_loss:      -0.0122	actor_stats/pi_max:        0.5893	critic_stats/critic_loss:  0.0389
+critic_stats/q_taken_mean:  2.3925	critic_stats/target_mean:  2.4030	critic_stats/td_error_abs:  0.1520	max_singular_values/actor_layer_0:  4.2516
+max_singular_values/actor_layer_2:  8.3171	max_singular_values/actor_layer_3:  8.1085	max_singular_values/actor_layer_6:  3.6748	max_singular_values/actor_layer_8:  2.2808
+max_singular_values/critic_layer_0:  3.7789	max_singular_values/critic_layer_2:  5.2957	max_singular_values/critic_layer_5:  2.3281	max_singular_values/critic_layer_6:  0.6359
+norm/agent_grad_norm:      0.0616	norm/agent_param_norm:    27.5184	norm/critic_grad_norm:     0.5593	norm/critic_param_norm:   14.6532
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0000	train_runner_stats/ep_length_mean: 28.3772	train_runner_stats/return_mean:  4.5677	train_runner_stats/return_std:  0.3119
+
+[INFO 19:52:06] my_main Recent Stats | t_env:     551401 | Episode:    19400
+actor_stats/advantage_mean:  0.0023	actor_stats/pg_loss:      -0.0034	actor_stats/pi_max:        0.5940	critic_stats/critic_loss:  0.0316
+critic_stats/q_taken_mean:  2.3968	critic_stats/target_mean:  2.3991	critic_stats/td_error_abs:  0.1358	max_singular_values/actor_layer_0:  4.4062
+max_singular_values/actor_layer_2:  8.4908	max_singular_values/actor_layer_3:  8.4034	max_singular_values/actor_layer_6:  3.8216	max_singular_values/actor_layer_8:  2.3848
+max_singular_values/critic_layer_0:  3.9551	max_singular_values/critic_layer_2:  5.4690	max_singular_values/critic_layer_5:  2.4326	max_singular_values/critic_layer_6:  0.6402
+norm/agent_grad_norm:      0.0397	norm/agent_param_norm:    28.0081	norm/critic_grad_norm:     0.3099	norm/critic_param_norm:   14.9501
+test_runner_stats/battle_won_mean:  0.0000	test_runner_stats/dead_allies_mean:  2.9800	test_runner_stats/dead_enemies_mean:  0.0000	test_runner_stats/ep_length_mean: 45.4400
+test_runner_stats/return_mean:  3.1349	test_runner_stats/return_std:  0.5605	train_runner_stats/battle_won_mean:  0.0000	train_runner_stats/dead_allies_mean:  3.0000
+train_runner_stats/dead_enemies_mean:  0.0000	train_runner_stats/ep_length_mean: 28.2956	train_runner_stats/return_mean:  4.5438	train_runner_stats/return_std:  0.3115
+

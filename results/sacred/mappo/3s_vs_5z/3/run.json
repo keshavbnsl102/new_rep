@@ -1,0 +1,108 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home2/keshav.bansal/epymarl_spectral/src_spectral",
+    "dependencies": [
+      "munch==2.5.0",
+      "numpy==1.23.1",
+      "PyYAML==5.3.1",
+      "sacred==0.8.2",
+      "torch==1.12.1"
+    ],
+    "mainfile": "main.py",
+    "name": "spectral_epymarl",
+    "repositories": [
+      {
+        "commit": "8e640c739028d129fc3adc70d6abea140923e28e",
+        "dirty": true,
+        "url": "https://github.com/kinalmehta/epymarl_spectral.git"
+      },
+      {
+        "commit": "8e640c739028d129fc3adc70d6abea140923e28e",
+        "dirty": true,
+        "url": "https://github.com/kinalmehta/epymarl_spectral.git"
+      },
+      {
+        "commit": "8e640c739028d129fc3adc70d6abea140923e28e",
+        "dirty": true,
+        "url": "https://github.com/kinalmehta/epymarl_spectral.git"
+      }
+    ],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_63ad038c3f824f6daf7934993f7c2552.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_2b4003f7f0bf10a4bdee68aa8f230655.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_8802c2fa10bcfb1f8cd8202092532a19.py"
+      ]
+    ]
+  },
+  "heartbeat": "2022-08-13T18:16:15.625575",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz",
+    "gpus": {
+      "driver_version": "510.85.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11264
+        }
+      ]
+    },
+    "hostname": "gnode011",
+    "os": [
+      "Linux",
+      "Linux-4.15.0-189-generic-x86_64-with-glibc2.27"
+    ],
+    "python_version": "3.9.12"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=3s_vs_5z",
+        "rnn_spectral=False",
+        "policy_spectral=False",
+        "critic_spectral=True",
+        "spectral_regularization=False",
+        "seed=3",
+        "use_wandb=False"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2022-08-13T18:16:05.498640",
+  "status": "RUNNING"
+}

@@ -1,0 +1,177 @@
+[INFO 23:44:10] spectral_epymarl Running command 'my_main'
+[INFO 23:44:10] spectral_epymarl Started run with ID "2"
+[DEBUG 23:44:10] spectral_epymarl Starting Heartbeat
+[DEBUG 23:44:10] my_main Started
+[INFO 23:44:10] my_main Experiment Parameters:
+[INFO 23:44:10] my_main 
+
+{   'action_selector': 'soft_policies',
+    'add_value_last_step': True,
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 10,
+    'batch_size_run': 10,
+    'buffer_cpu_only': True,
+    'buffer_size': 10,
+    'checkpoint_path': '',
+    'critic_spectral': False,
+    'critic_type': 'cv_critic',
+    'entropy_coef': 0.001,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'heuristic_rest': False,
+                    'map_name': '3s_vs_5z',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 3,
+                    'state_last_action': False,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epochs': 4,
+    'eps_clip': 0.2,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hidden_dim': 128,
+    'hypergroup': None,
+    'label': 'default_label',
+    'learner': 'ppo_learner',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'name': 'mappo',
+    'obs_agent_id': True,
+    'obs_individual_obs': False,
+    'obs_last_action': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'policy_spectral': False,
+    'q_nstep': 10,
+    'repeat_id': 1,
+    'rnn_spectral': False,
+    'runner': 'parallel',
+    'runner_log_interval': 10000,
+    'save_model': True,
+    'save_model_interval': 1000000,
+    'save_replay': False,
+    'seed': 3,
+    'spectral_regularization': False,
+    'standardise_returns': False,
+    'standardise_rewards': False,
+    't_max': 40050000,
+    'target_update_interval_or_tau': 0.01,
+    'test_greedy': True,
+    'test_interval': 1000000,
+    'test_nepisode': 100,
+    'use_cuda': True,
+    'use_rnn': True,
+    'use_tensorboard': True,
+    'use_wandb': False,
+    'wandb_entity': 'kinalmehta',
+    'wandb_project': 'marl-spectral'}
+
+[INFO 23:44:18] my_main Beginning training for 40050000 timesteps
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 20909 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-824f15v2/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 20209 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-nf4xapwt/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15447 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-s8z2itvq/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 16900 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-oj1qoh28/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 24621 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-g36zitlq/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15861 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-ddb2_d44/
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:16900/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:24621/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:20909/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:20209/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:15447/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 23361 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-0dl6vecz/
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:15861/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:23361/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 24256 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-cg2igfsq/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 15227 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-avolpmr0/
+[INFO 23:44:19] absl Launching SC2: /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 18887 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-9ktzuu8k/
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:15227/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:24256/sc2api, attempt: 0, running: True
+[INFO 23:44:19] absl Connecting to: ws://127.0.0.1:18887/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 20209 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-nf4xapwt/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15227 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-avolpmr0/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15861 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-ddb2_d44/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 23361 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-0dl6vecz/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 20909 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-824f15v2/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 16900 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-oj1qoh28/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 15447 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-s8z2itvq/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 24621 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-g36zitlq/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 18887 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-9ktzuu8k/'
+Command Line: '"/home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 24256 -dataDir /home2/keshav.bansal/epymarl_spectral/3rdparty/StarCraftII/ -tempDir /tmp/sc-cg2igfsq/'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:23361/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:15227/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:24621/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:20909/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:15861/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:20209/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:18887/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:15447/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:16900/sc2api, attempt: 1, running: True
+[INFO 23:44:20] absl Connecting to: ws://127.0.0.1:24256/sc2api, attempt: 1, running: True
